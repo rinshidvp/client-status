@@ -30,22 +30,19 @@
 
     <div id="dashboard" hidden>
       <section class="hero card">
-        <div class="hero-head">
-          <div>
-            <p class="eyebrow" id="client-name"></p>
-            <h1 id="project-name"></h1>
-          </div>
+        <div class="hero-main">
+          <p class="eyebrow" id="client-name"></p>
+          <h1 id="project-name"></h1>
           <span class="pill" id="project-health"></span>
+          <p class="summary" id="project-summary"></p>
         </div>
-        <p class="summary" id="project-summary"></p>
 
         <div class="progress-block">
-          <div class="progress-label">
-            <span>Overall progress</span>
-            <strong id="progress-percent">0%</strong>
-          </div>
-          <div class="bar" role="progressbar" aria-label="Overall progress" aria-valuemin="0" aria-valuemax="100" id="progress-bar">
-            <div class="bar-fill" id="progress-fill"></div>
+          <div class="ring" role="progressbar" aria-label="Overall progress" aria-valuemin="0" aria-valuemax="100" id="progress-bar">
+            <div class="ring-face">
+              <strong id="progress-percent">0%</strong>
+              <span>complete</span>
+            </div>
           </div>
           <p class="muted small" id="progress-count"></p>
         </div>

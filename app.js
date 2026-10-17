@@ -44,7 +44,7 @@
     health.className = "pill tone-" + L.healthTone(project.status);
 
     $("progress-percent").textContent = progress.percent + "%";
-    $("progress-fill").style.width = progress.percent + "%";
+    $("progress-bar").style.setProperty("--p", progress.percent);
     $("progress-bar").setAttribute("aria-valuenow", String(progress.percent));
     $("progress-count").textContent = progress.total
       ? progress.done + " of " + progress.total + " tasks completed"

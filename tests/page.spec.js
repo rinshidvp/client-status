@@ -119,6 +119,9 @@ test("empty sheet shows friendly placeholders", async ({ page }) => {
 });
 
 test("not configured shows setup message", async ({ page }) => {
+  await page.route("**/config.js", (route) =>
+    route.fulfill({ contentType: "text/javascript", body: 'window.STATUS_CONFIG = { API_URL: "" };' })
+  );
   await page.goto("/?k=" + KEY);
   await expect(page.locator("#state h1")).toHaveText("Not connected yet");
 });
